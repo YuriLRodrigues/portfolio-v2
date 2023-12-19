@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import StarsCanvas from "./components/stars-background";
+import { Header } from "@/components/interface/header/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="bg-[#030014]">{children}</body>
+      <body className="bg-[#030014]">
+        <Header />
+        <StarsCanvas />
+        {children}
+      </body>
     </html>
   );
 }
