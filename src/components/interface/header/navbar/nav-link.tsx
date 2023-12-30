@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ComponentProps } from "react";
 
 type NavlinkProps = ComponentProps<"a">;
