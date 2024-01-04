@@ -48,10 +48,7 @@ export const ProjectCardImages = ({ project }: ProjectCardsImagesProps) => {
         {project.techs.map((tech, index) => {
           const Tech = tech
           return (
-            <Tech
-              className="mx-auto h-8 w-8 opacity-0 md:h-11 md:w-11"
-              key={index}
-            />
+            <Tech className="mx-auto h-8 w-8 md:h-11 md:w-11" key={index} />
           )
         })}
       </div>
