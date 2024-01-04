@@ -52,7 +52,7 @@ export const ProjectsSlider = () => {
       }}
       pagination={true}
       modules={[EffectCoverflow, Navigation]}
-      className="mySwiper relative mx-auto mt-10 flex w-full max-w-[1185px] cursor-grab items-center justify-center gap-4 py-10 md:mt-20"
+      className="mySwiper relative mx-auto mt-10 flex min-h-fit w-full max-w-[1185px] cursor-grab items-center justify-center gap-4 py-10 md:mt-20"
       style={{
         paddingLeft: '30px',
         paddingRight: '30px',
