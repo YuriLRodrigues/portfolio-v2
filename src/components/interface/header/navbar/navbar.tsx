@@ -1,18 +1,22 @@
-"use client";
-import { useAtomValue } from "jotai";
-import { ReactNode } from "react";
-import { menuIsOpen } from "../menu-hamburger";
+'use client'
+import { ReactNode } from 'react'
+
+import { useAtomValue } from 'jotai'
+
+import { menuIsOpen } from '../menu-hamburger'
 
 export const Navbar = ({ children }: { children: ReactNode }) => {
-  const menuOpen = useAtomValue(menuIsOpen);
+  const menuOpen = useAtomValue(menuIsOpen)
 
   return (
     <nav
-      className={`p-4 md:static absolute top-14 w-full bg-[#030014] right-0 px-4 md:px-0 duration-300 ${
-        menuOpen ? "translate-y-0" : "md:translate-y-0 translate-y-[-200%]"
+      className={`absolute right-0 top-16 -z-40 mt-0.5 w-full p-4 px-4 duration-700 lg:static  ${
+        menuOpen
+          ? 'translate-y-0 bg-[#220D3C]'
+          : 'translate-y-[-200%] bg-transparent lg:translate-y-0'
       }`}
     >
       {children}
     </nav>
-  );
-};
+  )
+}
