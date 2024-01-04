@@ -1,9 +1,14 @@
+'use client'
+import 'aos/dist/aos.css'
+AOS.init()
+
 import { FaCircle } from 'react-icons/fa'
 
 import { Heading } from '@/components/ui/heanding'
 import { Text } from '@/components/ui/text'
 
 import { expProf } from '@/config/exp-profissional'
+import AOS from 'aos'
 
 export const TabExpProfessional = () => {
   return (

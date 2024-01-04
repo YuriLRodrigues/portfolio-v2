@@ -1,9 +1,13 @@
+'use client'
+import 'aos/dist/aos.css'
+AOS.init()
 import { FaCircle } from 'react-icons/fa'
 
 import { Heading } from '@/components/ui/heanding'
 import { Text } from '@/components/ui/text'
 
 import { expAcad } from '@/config/exp-academic'
+import AOS from 'aos'
 
 export const TabExpAcademic = () => {
   return (

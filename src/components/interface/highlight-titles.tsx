@@ -1,3 +1,8 @@
+'use client'
+import 'aos/dist/aos.css'
+AOS.init()
+import AOS from 'aos'
+
 import { Heading } from '../ui/heanding'
 
 type HighlightTitles = {

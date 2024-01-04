@@ -1,5 +1,9 @@
 'use client'
+import 'aos/dist/aos.css'
+AOS.init()
 import Tilt from 'react-parallax-tilt'
+
+import AOS from 'aos'
 
 type CardSkillsProps = {
   time: number

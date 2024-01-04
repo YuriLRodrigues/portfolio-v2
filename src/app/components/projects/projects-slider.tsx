@@ -1,22 +1,21 @@
 'use client'
+import { useRef } from 'react'
+import { BiLeftArrow, BiRightArrow } from 'react-icons/bi'
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+
+import { Text } from '@/components/ui/text'
+
 import { Projects } from '@/config/projects'
 import { EffectCoverflow, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { ProjectCardImages } from './project-cards'
-
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
-import { Text } from '@/components/ui/text'
 
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
-
+import { ProjectCardImages } from './project-cards'
 import { ProjectLink } from './project-link'
 import { SlideButton } from './slide-button'
-
-import { BiLeftArrow, BiRightArrow } from 'react-icons/bi'
-import { useRef } from 'react'
 
 export const ProjectsSlider = () => {
   const swiperRef = useRef<any>()

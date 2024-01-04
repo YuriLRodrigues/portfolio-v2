@@ -1,4 +1,9 @@
+'use client'
+import 'aos/dist/aos.css'
+AOS.init()
 import Image from 'next/image'
+
+import AOS from 'aos'
 
 export const AboutLeftImage = () => {
   return (
