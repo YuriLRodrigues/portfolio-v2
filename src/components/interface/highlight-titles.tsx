@@ -1,7 +1,6 @@
 'use client'
-import 'aos/dist/aos.css'
-AOS.init()
-import AOS from 'aos'
+
+import { motion } from 'framer-motion'
 
 import { Heading } from '../ui/heanding'
 
@@ -12,13 +11,26 @@ type HighlightTitles = {
 
 export const HighlightTitles = ({ title, id }: HighlightTitles) => {
   return (
-    <div
+    <motion.div
       className="relative"
-      data-aos="fade-down"
-      data-aos-duration="500"
-      data-aos-offset="100"
-      data-aos-easing="ease-in-out-back"
       id={id}
+      initial={{
+        opacity: 0,
+        scale: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        y: 0,
+      }}
+      exit={{
+        opacity: 0,
+        scale: 1,
+      }}
+      transition={{
+        duration: 0.3,
+        delay: 0.1,
+      }}
     >
       <Heading
         size="xg"
@@ -37,6 +49,6 @@ export const HighlightTitles = ({ title, id }: HighlightTitles) => {
         {' '}
         {title}
       </Heading>
-    </div>
+    </motion.div>
   )
 }

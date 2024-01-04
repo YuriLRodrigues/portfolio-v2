@@ -1,18 +1,28 @@
 'use client'
-import 'aos/dist/aos.css'
-AOS.init()
 import Image from 'next/image'
 
-import AOS from 'aos'
+import { motion } from 'framer-motion'
 
 export const AboutLeftImage = () => {
   return (
-    <div
-      className="mx-auto md:mt-10"
-      data-aos="fade-right"
-      data-aos-duration="500"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"
+    <motion.div
+      className="mt-0 max-w-3xl space-y-6 md:mt-10 lg:ml-auto"
+      initial={{
+        opacity: 0,
+        x: -200,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: -200,
+      }}
+      transition={{
+        duration: 0.4,
+        delay: 0.25,
+      }}
     >
       <Image
         src="/eu.png"
@@ -21,6 +31,6 @@ export const AboutLeftImage = () => {
         height={420}
         className="max-w-[95%] lg:max-w-none"
       />
-    </div>
+    </motion.div>
   )
 }

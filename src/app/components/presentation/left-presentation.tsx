@@ -2,7 +2,6 @@
 import { Heading } from '@/components/ui/heanding'
 import { Text } from '@/components/ui/text'
 
-import { slideInFromLeft } from '@/utils/motion'
 import { motion } from 'framer-motion'
 
 import { SocialMedia } from './social-media'
@@ -12,9 +11,22 @@ export const LeftPresentation = () => {
   return (
     <motion.div
       className="max-w-3xl space-y-6 lg:ml-auto"
-      variants={slideInFromLeft(0.6)}
-      initial="hidden"
-      animate="visible"
+      initial={{
+        opacity: 0,
+        x: -150,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: -150,
+      }}
+      transition={{
+        duration: 0.32,
+        delay: 0.1,
+      }}
     >
       <Heading
         HeadingType="h1"

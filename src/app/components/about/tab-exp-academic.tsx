@@ -1,31 +1,53 @@
 'use client'
-import 'aos/dist/aos.css'
-AOS.init()
 import { FaCircle } from 'react-icons/fa'
 
 import { Heading } from '@/components/ui/heanding'
 import { Text } from '@/components/ui/text'
 
 import { expAcad } from '@/config/exp-academic'
-import AOS from 'aos'
+import { motion } from 'framer-motion'
 
 export const TabExpAcademic = () => {
   return (
-    <section
+    <motion.section
+      initial={{
+        opacity: 0,
+        y: -150,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: -150,
+      }}
+      transition={{
+        duration: 0.32,
+        delay: 0.1,
+      }}
       className="mt-6 overflow-hidden rounded-md bg-white/10 px-4 py-4 backdrop-blur-md"
-      data-aos="fade-down"
-      data-aos-duration="500"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"
     >
-      {expAcad.map((exp) => (
-        <div
+      {expAcad.map((exp, i) => (
+        <motion.div
           key={exp.area}
           className="grid grid-cols-1 justify-between lg:grid-cols-2 lg:space-x-6"
-          data-aos="fade-down"
-          data-aos-duration="800"
-          data-aos-offset="150"
-          data-aos-easing="ease-in-sine"
+          initial={{
+            opacity: 0,
+            y: -75,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          exit={{
+            opacity: 0,
+            y: -75,
+          }}
+          transition={{
+            duration: 0.4,
+            delay: 0.3 * i,
+          }}
         >
           <div className="relative border-neutral-400/50 pb-4 pt-4 md:pt-0 lg:border-r-2">
             <div className="hidden lg:block">
@@ -48,8 +70,8 @@ export const TabExpAcademic = () => {
           <article>
             <Text className="pb-4 text-justify md:pb-4">{exp.description}</Text>
           </article>
-        </div>
+        </motion.div>
       ))}
-    </section>
+    </motion.section>
   )
 }

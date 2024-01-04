@@ -1,6 +1,4 @@
 'use client'
-import 'aos/dist/aos.css'
-AOS.init()
 
 import { FaCircle } from 'react-icons/fa'
 
@@ -8,21 +6,48 @@ import { Heading } from '@/components/ui/heanding'
 import { Text } from '@/components/ui/text'
 
 import { expProf } from '@/config/exp-profissional'
-import AOS from 'aos'
-
+import { motion } from 'framer-motion'
 export const TabExpProfessional = () => {
   return (
-    <section
+    <motion.section
       className="mt-6 rounded-md bg-white/10 p-2 backdrop-blur-md"
-      data-aos="fade-left"
-      data-aos-duration="800"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"
+      initial={{
+        opacity: 0,
+        y: -150,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      exit={{
+        opacity: 0,
+        x: -150,
+      }}
+      transition={{
+        duration: 0.32,
+        delay: 0.1,
+      }}
     >
-      {expProf.map((exp) => (
-        <div
+      {expProf.map((exp, i) => (
+        <motion.div
           key={exp.area}
           className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-6"
+          initial={{
+            opacity: 0,
+            y: -75,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          exit={{
+            opacity: 0,
+            y: -75,
+          }}
+          transition={{
+            duration: 0.4,
+            delay: 0.3 * i,
+          }}
         >
           <div className="relative my-4 border-neutral-400/50 pr-6 lg:border-r-2">
             <div className="hidden lg:block">
@@ -45,8 +70,8 @@ export const TabExpProfessional = () => {
           <article className="my-4">
             <Text size="lg">{exp.description}</Text>
           </article>
-        </div>
+        </motion.div>
       ))}
-    </section>
+    </motion.section>
   )
 }
