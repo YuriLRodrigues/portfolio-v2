@@ -47,8 +47,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br" className="!scroll-smooth">
-      <body className={`${poppins.className} bg-galaxy bg-cover`}>
+    <html lang="pt-br" className="overflow-x-hidden !scroll-smooth">
+      <body
+        className={`${poppins.className} overflow-x-hidden bg-galaxy bg-cover`}
+      >
         <Header />
         <StarsCanvas />
         {children}
