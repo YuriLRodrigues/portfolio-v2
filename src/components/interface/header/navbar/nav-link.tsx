@@ -1,14 +1,14 @@
-import { ComponentProps } from "react";
+import { ComponentProps } from 'react'
 
-type NavlinkProps = ComponentProps<"a">;
+type NavlinkProps = ComponentProps<'a'>
 
 export const Navlink = ({ ...props }: NavlinkProps) => {
   return (
-    <li className="list-none cursor-pointer">
+    <li className="cursor-pointer list-none">
       <a
-        className={`relative md:after:absolute md:after:content-[''] md:after:bg-gradient-to-r from-[#3a3172] from-67% to-[#a991f0] md:after:h-[2px] md:after:w-0 md:after:left-0 md:after:-bottom-[5px] md:hover:after:w-[100%] md:after:duration-500 pl-2 md:pl-0 uppercase font-medium text-[#fff] duration-500 md:border-l-0 border-l-2 border-[#3a3172] hover:text-[#aaaaaa]`}
+        className={`from-67% relative border-l-2 border-[#3a3172] from-[#3a3172] to-[#a991f0] pl-2 font-medium uppercase text-[#fff] duration-500 hover:text-[#aaaaaa] lg:border-l-0 lg:pl-0 lg:after:absolute lg:after:-bottom-[5px] lg:after:left-0 lg:after:h-[3px] lg:after:w-0 lg:after:bg-gradient-to-r lg:after:duration-500 lg:after:content-[''] lg:hover:after:w-[100%]`}
         {...props}
       />
     </li>
-  );
-};
+  )
+}
