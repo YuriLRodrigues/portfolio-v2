@@ -34,7 +34,7 @@ export const ProjectCardImages = ({ project }: ProjectCardsImagesProps) => {
       centeredSlides={true}
       slidesPerView={'auto'}
       modules={[Navigation]}
-      className="mySwiper group relative h-[60%] max-h-[60%] max-w-[500px] cursor-grab overflow-hidden"
+      className="mySwiper group relative h-[70%] max-h-[70%] max-w-[500px] cursor-grab overflow-hidden"
       style={{
         cursor: 'grab',
       }}
@@ -48,7 +48,7 @@ export const ProjectCardImages = ({ project }: ProjectCardsImagesProps) => {
         {project.techs.map((tech, index) => {
           const Tech = tech
           return (
-            <Tech className="mx-auto h-10 w-10 md:h-12 md:w-12" key={index} />
+            <Tech className="mx-auto h-8 w-8 md:h-11 md:w-11" key={index} />
           )
         })}
       </div>
