@@ -57,7 +57,7 @@ export const TabResume = () => {
           delay: 0.24,
         }}
       >
-        <Text>
+        <Text className="text-justify">
           Desde Junho de 2023, tenho me dedicado em projetos freelancers e
           contribuições no mundo do código aberto, alimentando minha paixão pelo
           desenvolvimento. Meu foco tem sido ampliar minha habilidade fullstack

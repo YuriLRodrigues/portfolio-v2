@@ -63,12 +63,14 @@ export const TabExpProfessional = () => {
             >
               {exp.area}
             </Heading>
-            <Text size="xs" variant="subtitle" className="text-muted-7">
+            <Text size="xs" variant="subtitle" className="text-muted-7 ">
               {exp.date}
             </Text>
           </div>
           <article className="my-4">
-            <Text size="lg">{exp.description}</Text>
+            <Text size="lg" className="text-justify">
+              {exp.description}
+            </Text>
           </article>
         </motion.div>
       ))}
