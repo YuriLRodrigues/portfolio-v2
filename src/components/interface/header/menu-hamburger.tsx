@@ -11,7 +11,7 @@ export const MenuHamburger = () => {
   return (
     <button
       onClick={() => setValueMenuIsOpen((prev) => !prev)}
-      className="md:hidden flex items-center justify-center mr-4 text-xl bg-transparent text-white"
+      className="lg:hidden flex items-center justify-center mr-4 text-xl bg-transparent text-white"
     >
       {menuOpen ? (
         <BiMenu className="w-8 h-8" />
