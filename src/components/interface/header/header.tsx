@@ -1,7 +1,7 @@
 import { Logo } from './logo'
 import { MenuHamburger } from './menu-hamburger'
 import { Navbar } from './navbar/navbar'
-import { Navigation } from './navbar/navgation'
+import { Navigation } from './navbar/navigation'
 
 export const Header = () => {
   return (
