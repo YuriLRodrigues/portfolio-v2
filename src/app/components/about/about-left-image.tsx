@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export const AboutLeftImage = () => {
   return (
     <motion.div
-      className="mt-0 max-w-3xl space-y-6 md:mt-10 lg:ml-auto"
+      className="mx-auto mt-0 max-w-3xl space-y-6 md:mt-10 lg:ml-auto"
       initial={{
         opacity: 0,
         x: -200,
